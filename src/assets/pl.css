@@ -1,0 +1,303 @@
+.pl-btn {
+    border: 0.3em solid black;
+    border-radius: 0.8em;
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #ffffff;
+    cursor: pointer;
+    background: #FFF;
+    text-align: center;
+    outline: 0;
+}
+.pl-btn:hover {
+   border-color:#D9D8D8;
+   color:#D9D8D8;
+   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
+}
+.pl-btn:active {
+    border-color:#B6B6B6;
+    color: #B6B6B6;
+    outline: 0
+}
+.content-button {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    border-radius: 0.6em;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    margin-left: 10px; 
+}
+
+.pl-btn.check {
+    padding: 6px 10px;
+    margin-right: auto;
+}
+.pl-check-input {
+    margin: 10px 10px auto auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+}
+
+/* main board */
+.main-page {
+    background-color: #ffffff; 
+    border: 1px solid #eee; 
+    box-shadow: 0 4px 24px 10px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+    width: 90vw;
+    margin: 2vh 2vh 0 5vh;
+}
+
+.btn-container {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.main-button{
+width: 90%; 
+height: 10vh;
+margin-top: 2em;
+border: 0.8vh solid black; 
+border-radius: 2vh;
+}
+
+.pl-aside-container {
+    position: relative;
+    width: 13%;
+}
+.main-aside {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border: 0.8vh solid black; 
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.el-aside .main-button {
+    color: black;
+}
+.el-aside .main-button:hover {
+    color: #3a8ee6;
+}
+
+/* 问题界面 */
+.question-block {
+    display: flex;
+    align-items: center;
+    width: 32%;
+    margin-bottom: 10px;
+}
+.question-block-content {
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid black;
+    align-items: center;
+    align-content: flex-start;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+/* note.vue */
+.pl-note-checkbox .el-checkbox__inner {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        margin: 0 0 0 0;
+    }
+    #app {
+        height: 100vh;
+        width: 100%;
+    }
+    .main-page {
+        margin: 0 0 0 0;
+        height: 100%;
+        width: 100%;
+        border: 0 0 0 0;
+    }
+    .el-main {
+        padding: 30px 0 20px 0;
+    }
+    .main-aside {
+        display: none;
+    }
+    .pl-aside-container {
+        /* position: relative; */
+        width: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .sidebar-btn {
+        font-size: 30px;
+    }
+    .pl-aside-container.open {
+        display: initial;
+        /* width: 200px; */
+        width: 50%;
+        height: 100vh;
+    }
+    .pl-aside-container.content {
+        display: none;
+    }
+    .main-aside.open {
+        display: initial;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        z-index: 2;
+    }
+    .pl-empty {
+        position: fixed;
+        /* left: 200px; */
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.2);
+        /* background-color:#000000;
+        opacity:0.5; */
+    }
+    .task-main {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+    .done-block {
+        font-size: 16px;
+    }
+    .el-aside .main-button {
+        margin-top: 28px;
+        font-weight: 1000;
+        font-size: 30px;
+    }
+
+    /* 问题界面-mobile */
+    .question-block {
+        width: 100% !important;
+    }
+    .question-block-content {
+        width: 100% !important;
+    }
+
+    /* 标签页面 */
+    .el-dialog {
+        height: 50%;
+        width: 95% !important;
+    }
+    .el-dialog .el-dialog__body {
+        height: 50%;
+    }
+    .NoteContain {
+        position: relative;
+        overflow: hidden;
+    }
+    .NoteContain.cancel {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    .NoteCol {
+        flex-wrap: wrap;
+    }
+    .NoteCol .time {
+        margin: 0 0 15px 0;
+        font-size: 22px;
+    }
+    .NoteCol .title {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+    .NoteCol .title.cancel {
+        width: calc(100% - 28px);
+    }
+    .pl-note-empty {
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .pl-note-empty .line {
+        height: 10px;
+        width: 100%;
+        margin: auto;
+        background: radial-gradient(black 24%, rgba(0, 0, 0, 0.2) 76%);
+    }
+    .pl-note-checkbox .el-checkbox__inner {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        border: 3px solid gray;
+        margin-right: 10px
+    }
+    .pl-note-checkbox .el-checkbox__inner:hover {
+        background-color: white;
+        border-color: gray;
+    }
+    .pl-note-checkbox .el-checkbox__inner:focus {
+        background-color: white;
+        border-color: gray;
+    }
+    .pl-note-checkbox .is-checked .el-checkbox__inner {
+        background-color: gray;
+        border-color: gray;
+    }
+    
+    /* 加载 */
+    /* @keyframes loader {
+        to { background-position: -800px 0; }
+    } */
+    
+    /* .loader {
+        margin: auto;
+        width: 100px; height: 100px;
+        text-indent: 999px; overflow: hidden; /* Hide text */
+        /* background: url(./loader.png) 0 0;
+        animation: loader 1s infinite steps(8); */
+    /* } */
+
+    /* content 页面字体调小，button 调大 */
+    .pl-textarea {
+        font-size: 20px;
+        height: 75%;
+    }   
+    .content-button {
+        font-size: 16px;
+    }
+    .main-content {
+        padding-top: 0;
+    }
+}
+@media screen and (min-width: 900px) {
+    .sidebar-btn {
+        display: none;
+    }
+    .el-main::-webkit-scrollbar {
+        width: 2px;
+    }
+    .el-main::-webkit-scrollbar-thumb{
+        width: 2px;
+        background-color: black;
+    }
+}
